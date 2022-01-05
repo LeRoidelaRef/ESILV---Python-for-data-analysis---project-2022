@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Predictions{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <p>Please enter values to predict which copyist would have written the corresponding lines:</p>
+  <form method="post">
+    <label for="intercolumnar distance">intercolumnar distance</label>
+    <input name="intercolumnar distance" id="intercolumnar distance" required><br>
+    <label for="upper margin">upper margin</label>
+    <input type="upper margin" name="upper margin" id="upper margin" required><br>
+    <label for="lower margin">lower margin</label>
+    <input type="lower margin" name="lower margin" id="lower margin" required><br>
+    <label for="exploitation">exploitation</label>
+    <input type="exploitation" name="exploitation" id="exploitation" required><br>
+    <label for="row number">row number</label>
+    <input type="row number" name="row number" id="row number" required><br>
+    <label for="modular ratio">modular ratio</label>
+    <input type="modular ratio" name="modular ratio" id="modular ratio" required><br>
+    <label for="interlinear spacing">interlinear spacing</label>
+    <input type="interlinear spacing" name="interlinear spacing" id="interlinear spacing" required><br>
+    <label for="weight">weight</label>
+    <input type="weight" name="weight" id="weight" required><br>
+    <label for="peak number">peak number</label>
+    <input type="peak number" name="peak number" id="peak number" required><br>
+    <label for="modular ratio/ interlinear spacing">modular ratio/ interlinear spacing</label>
+    <input type="modular ratio/ interlinear spacing" name="modular ratio/ interlinear spacing" id="modular ratio/ interlinear spacing" required><br>
+    <input type="submit" value="Predict">
+  </form>
+  <p>The copyist would be: {{ prediction }}</p>
+  
+{% endblock %}

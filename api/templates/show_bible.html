@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Avila bible{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <p>Please enter the row from the dataset you would like to see:</p>
+  <form method="post">
+    <label for="row">Row</label>
+    <input name="row" id="row" required>
+    <input type="submit" value="Show">
+  </form>
+  <p>Here are the values of this row: {{ row_value }}</p>
+  
+{% endblock %}

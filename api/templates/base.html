@@ -1,19 +1,28 @@
 <!doctype html>
 <title>{% block title %}{% endblock %} - ESILV - Python-for-data-analysis - project-2022</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<header>
+	<h1>ESILV - Python-for-data-analysis - project-2022</h1>
+	<h2>The Avila bible</h2>
+</header>
 <nav>
-  <h1>ESILV - Python-for-data-analysis - project-2022</h1>
-  <ul>
-      <li><a href="{{ url_for('index') }}">index</a>
-      <li><a href="{{ url_for('show_bible') }}">bible</a>
-  </ul>
+	<img src="../static/logo_esilv.png" alt="ESILV">
+	<h1>Menu</h1>
+	<ul>
+		<li><a href="{{ url_for('index') }}">Home</a>
+		<li><a href="{{ url_for('show_bible') }}">Select line of the dataset</a>
+		<li><a href="{{ url_for('predict') }}">Predict from values</a>
+	</ul>
 </nav>
 <section class="content">
-  <header>
-    {% block header %}{% endblock %}
-  </header>
-  {% for message in get_flashed_messages() %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
-  {% block content %}{% endblock %}
+	<header>
+		{% block header %}{% endblock %}
+	</header>
+	{% for message in get_flashed_messages() %}
+		<div class="flash">{{ message }}</div>
+	{% endfor %}
+	{% block content %}{% endblock %}
 </section>
+<footer>
+	<p>Project made by Thomas BAUDU and Paul CANAL - ESILV 2022 - <a href="https://github.com/LeRoidelaRef/ESILV---Python-for-data-analysis---project-2022">Our GitHub</a></p>
+</footer>
