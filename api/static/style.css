@@ -1,0 +1,47 @@
+html{
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 auto 0 250px;
+  background-color: white;
+  padding: 0 10px;
+}
+
+nav {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px; bottom: 0px; left: 0px;
+  width: 250px;
+  padding: 0 10px;
+  background-color: #CE1052;
+}
+
+footer {
+  position: absolute;
+  right: 0px; bottom: 0px; left: 250px;
+  padding: 0 10px;
+  background-color: lightgray;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-gap: 2px;
+  line-height: 1;
+}
+
+label {
+    grid-column: 1 / 2;
+}
+
+input,
+button {
+  grid-column: 2 / 3;
+}
+
+img {
+  border: 1px solid;
+  margin: 30px 0 0 40px;
+  box-shadow: 2px 2px 3px black;
+}
