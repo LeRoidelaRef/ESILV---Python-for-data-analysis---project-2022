@@ -22,6 +22,6 @@ Flask API
 
 In order to use the API you need to install flask (pip install flask).
 
-Then you need to go into the directory of the Flask application and write "flask run" from the command line.
+Then you need to go into the directory of the Flask application (the file app.py) and write "flask run" from the command line.
 
 This API allows the use of the Machine Learning model, using pickle, and can also show specific rows of the dataset.
